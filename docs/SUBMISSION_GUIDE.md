@@ -243,7 +243,8 @@ OK
 
 **Activity 1 — code of `server.py`**
 
-Paste the whole file. It contains:
+Paste [`submission/6a_server.py`](../submission/6a_server.py) — the complete
+Flask application. It contains:
 
 ```python
 @app.route("/emotionDetector")
