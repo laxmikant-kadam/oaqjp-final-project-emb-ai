@@ -310,7 +310,8 @@ with `_empty_result()` producing:
 
 **Activity 2 — `server.py` handling blank input**
 
-Paste:
+Paste [`submission/7b_error_handling_server.py`](../submission/7b_error_handling_server.py)
+— the complete `server.py`. The blank-input handling is:
 
 ```python
     if not text_to_analyze.strip():
