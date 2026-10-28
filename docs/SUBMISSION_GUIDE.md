@@ -206,7 +206,13 @@ __all__ = ["emotion_detection"]
 
 **Activity 2 — terminal output validating the package**
 
-Paste [`docs/terminal/04_package_validation.txt`](terminal/04_package_validation.txt).
+Paste [`submission/4b_packaging_test.txt`](../submission/4b_packaging_test.txt)
+— the `/home/project/final_project` transcript running
+`python3 -c "from EmotionDetection.emotion_detection import emotion_detector; print(emotion_detector('I am very angry'))"`
+and showing all five scores with `'dominant_emotion': 'anger'`.
+
+Additional import checks are in
+[`docs/terminal/04_package_validation.txt`](terminal/04_package_validation.txt).
 
 ---
 
