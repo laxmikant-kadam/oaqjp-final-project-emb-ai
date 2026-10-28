@@ -155,9 +155,15 @@ The extended version with all five reference statements is in
 
 ### Task 4 — Validate the `EmotionDetection` package (2 points)
 
-**Activity 1 — URL of `__init__.py`**
+**Activity 1 - URL of `__init__.py`**
 
-`https://github.com/laxmikant-kadam/oaqjp-final-project-emb-ai/blob/main/EmotionDetection/__init__.py`
+Submit the public repository URL - the grader checks the repository name and
+visibility, then reads `EmotionDetection/__init__.py` from the repository:
+
+`https://github.com/laxmikant-kadam/oaqjp-final-project-emb-ai`
+
+Direct file link (for reference only):
+<https://github.com/laxmikant-kadam/oaqjp-final-project-emb-ai/blob/main/EmotionDetection/__init__.py>
 
 Content:
 
