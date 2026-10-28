@@ -152,13 +152,18 @@ File: `EmotionDetection/emotion_detection.py` → `_format_response()` and
 EMOTIONS = ("anger", "disgust", "fear", "joy", "sadness")
 
 def _format_response(watson_response):
-    """Extract the five emotion scores and the dominant emotion."""
+    """Return the Watson scores in the required output format."""
     scores = watson_response["emotionPredictions"][0]["emotion"]
     dominant_emotion = max(scores, key=scores.get)
 
-    result = {emotion: scores.get(emotion) for emotion in EMOTIONS}
-    result["dominant_emotion"] = dominant_emotion
-    return result
+    return {
+        "anger": scores.get("anger"),
+        "disgust": scores.get("disgust"),
+        "fear": scores.get("fear"),
+        "joy": scores.get("joy"),
+        "sadness": scores.get("sadness"),
+        "dominant_emotion": dominant_emotion,
+    }
 ```
 
 Resulting dictionary:
