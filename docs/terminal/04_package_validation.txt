@@ -1,0 +1,42 @@
+TASK 4 - ACTIVITY 2
+Terminal output validating that EmotionDetection is a valid package
+==================================================================
+
+EmotionDetection/__init__.py contains:
+
+    from . import emotion_detection
+
+so the package exposes the application module when it is imported.
+
+
+Command
+-------
+python -c "import EmotionDetection; print(EmotionDetection.emotion_detection.__name__)"
+
+Output
+------
+EmotionDetection.emotion_detection
+
+
+Command
+-------
+python -c "import EmotionDetection; print(EmotionDetection.__file__)"
+
+Output
+------
+D:\Projects\emotion detector\EmotionDetection\__init__.py
+
+
+Command
+-------
+python -c "import EmotionDetection; print(EmotionDetection.emotion_detection.emotion_detector('I am really mad about this'))"
+
+Output
+------
+{'anger': 0.975758, 'disgust': 0.006061, 'fear': 0.006061, 'joy': 0.006061, 'sadness': 0.006061, 'dominant_emotion': 'anger'}
+
+
+Result
+------
+EmotionDetection is imported as a package, its emotion_detection submodule is
+available, and the emotion_detector() function is callable through the package.

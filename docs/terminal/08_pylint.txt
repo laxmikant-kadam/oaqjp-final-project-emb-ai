@@ -1,0 +1,33 @@
+TASK 8 - ACTIVITY 2
+Terminal output showing a perfect static code analysis score
+===========================================================
+
+Command
+-------
+python -m pylint server.py
+
+Output
+------
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+
+Command (the whole project)
+---------------------------
+python -m pylint EmotionDetection server.py test_emotion_detection.py
+
+Output
+------
+
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+
+Result
+------
+No Pylint messages (C/R/W/E/F) are produced and both runs score 10.00/10.
+
+EmotionDetection/__init__.py carries a single, documented
+"# pylint: disable=invalid-name" because the package name is mandated by the
+assignment specification (CamelCase) and would otherwise raise C0103.

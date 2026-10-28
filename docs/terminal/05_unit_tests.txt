@@ -1,0 +1,36 @@
+TASK 5 - ACTIVITY 2
+Terminal output showing that all unit tests passed
+==================================================
+
+Command
+-------
+python -m unittest -v test_emotion_detection.py
+
+Output
+------
+test_anger (test_emotion_detection.TestEmotionDetector)
+An angry statement must be detected as anger. ... Watson NLP unavailable (ConnectTimeout); using the offline fallback model.
+ok
+test_disgust (test_emotion_detection.TestEmotionDetector)
+A disgusted statement must be detected as disgust. ... ok
+test_fear (test_emotion_detection.TestEmotionDetector)
+A frightened statement must be detected as fear. ... ok
+test_joy (test_emotion_detection.TestEmotionDetector)
+A glad statement must be detected as joy. ... ok
+test_sadness (test_emotion_detection.TestEmotionDetector)
+A sad statement must be detected as sadness. ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 8.145s
+
+OK
+
+
+Result
+------
+5 tests, 5 passed, 0 failed.
+
+The single "Watson NLP unavailable" line is printed by the application because
+this machine cannot reach the IBM Skills Network endpoint (see the note in
+02_import_and_test.txt). It does not affect the assertions: each test verifies
+result['dominant_emotion'] against the expected emotion.

@@ -1,0 +1,40 @@
+TASK 2 - ACTIVITY 2
+Import the application module and test it without errors
+========================================================
+
+Environment: Python 3.10.8, Flask 3.1.2, requests 2.32.5 (Windows).
+All commands are run from the project root (the folder that contains EmotionDetection/).
+
+
+Command
+-------
+python -c "from EmotionDetection.emotion_detection import emotion_detector; print(emotion_detector('I am glad this happened'))"
+
+Output
+------
+{'anger': 0.009524, 'disgust': 0.009524, 'fear': 0.009524, 'joy': 0.961905, 'sadness': 0.009524, 'dominant_emotion': 'joy'}
+
+
+Command
+-------
+python -c "from EmotionDetection.emotion_detection import emotion_detector; print(emotion_detector('I am really mad about this'))"
+
+Output
+------
+{'anger': 0.975758, 'disgust': 0.006061, 'fear': 0.006061, 'joy': 0.006061, 'sadness': 0.006061, 'dominant_emotion': 'anger'}
+
+
+Result
+------
+The module imports cleanly and both calls return a dictionary without raising an
+exception.
+
+
+NOTE ON THIS ENVIRONMENT
+------------------------
+The watson_nlp Emotion Predict endpoint used in the IBM Skills Network lab
+(sn-watson-emotion.labs.skills.network) is only routable from inside the lab
+network. On a normal machine the request raises ConnectTimeout, and
+emotion_detection.py then uses the built-in offline model that returns the same
+Watson JSON shape. Inside the lab the very same call goes to the real service.
+See "Note on the Watson NLP endpoint" in README.md.

@@ -1,0 +1,246 @@
+:root {
+  --bg-start: #0f172a;
+  --bg-end: #1e2a4a;
+  --card: #ffffff;
+  --ink: #101828;
+  --muted: #5b6478;
+  --accent: #4f46e5;
+  --accent-dark: #4338ca;
+  --border: #e3e7ef;
+  --error-bg: #fef3f2;
+  --error-border: #f04438;
+  --error-ink: #b42318;
+  --radius: 16px;
+  --shadow: 0 24px 60px rgba(8, 15, 35, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 40px 20px 24px;
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at 15% 0%, #24345c 0%, transparent 55%),
+    linear-gradient(150deg, var(--bg-start), var(--bg-end));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.card {
+  width: min(780px, 100%);
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 40px 44px 36px;
+  box-shadow: var(--shadow);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h1 {
+  margin: 0;
+  font-size: 34px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 12px 0 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 60ch;
+}
+
+.form {
+  margin-top: 28px;
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 104px;
+  padding: 14px 16px;
+  font: inherit;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink);
+  background: #fbfcfe;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.14);
+}
+
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.examples__label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.chip {
+  font: inherit;
+  font-size: 12.5px;
+  padding: 6px 12px;
+  color: #3b3f52;
+  background: #f3f5fa;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.chip:hover {
+  background: #e9ecf7;
+  border-color: #cfd5e6;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.btn {
+  font: inherit;
+  font-size: 14.5px;
+  font-weight: 600;
+  padding: 11px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+}
+
+.btn--primary {
+  color: #ffffff;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.28);
+}
+
+.btn--primary:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
+.btn--primary:disabled {
+  opacity: 0.65;
+  cursor: progress;
+}
+
+.btn--ghost {
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--border);
+}
+
+.btn--ghost:hover {
+  background: #f6f7fb;
+}
+
+.response {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
+}
+
+.response__title {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.response__body {
+  margin: 0;
+  padding: 16px 18px;
+  font-family: "Cascadia Code", Consolas, "Courier New", monospace;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: #23304a;
+  word-break: break-word;
+  background: #f7f9fd;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+  min-height: 62px;
+}
+
+.response__body.is-error {
+  color: var(--error-ink);
+  background: var(--error-bg);
+  border-color: var(--error-border);
+  border-left-color: var(--error-border);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 14.5px;
+  font-weight: 600;
+}
+
+.page-footer {
+  font-size: 12px;
+  color: rgba(226, 232, 240, 0.7);
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 560px) {
+  body {
+    padding: 20px 12px;
+  }
+
+  .card {
+    padding: 26px 22px;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

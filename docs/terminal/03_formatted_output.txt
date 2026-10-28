@@ -1,0 +1,73 @@
+TASK 3 - ACTIVITY 2
+Terminal output showing that the output format is accurate
+==========================================================
+
+The modified emotion_detector() always returns a dictionary with the five
+Watson emotion scores plus dominant_emotion, in this key order:
+
+    anger, disgust, fear, joy, sadness, dominant_emotion
+
+Script used (run from the project root)
+---------------------------------------
+from EmotionDetection.emotion_detection import emotion_detector
+
+statements = [
+    "I am glad this happened",
+    "I am really mad about this",
+    "I feel disgusted just hearing about this",
+    "I am so sad about this",
+    "I am really afraid that this will happen",
+]
+
+for statement in statements:
+    result = emotion_detector(statement)
+    print(f"Statement        : {statement}")
+    print(f"  anger          : {result['anger']}")
+    print(f"  disgust        : {result['disgust']}")
+    print(f"  fear           : {result['fear']}")
+    print(f"  joy            : {result['joy']}")
+    print(f"  sadness        : {result['sadness']}")
+    print(f"  dominant_emotion: {result['dominant_emotion']}")
+    print()
+
+Output
+------
+Statement        : I am glad this happened
+  anger          : 0.009524
+  disgust        : 0.009524
+  fear           : 0.009524
+  joy            : 0.961905
+  sadness        : 0.009524
+  dominant_emotion: joy
+
+Statement        : I am really mad about this
+  anger          : 0.975758
+  disgust        : 0.006061
+  fear           : 0.006061
+  joy            : 0.006061
+  sadness        : 0.006061
+  dominant_emotion: anger
+
+Statement        : I feel disgusted just hearing about this
+  anger          : 0.009524
+  disgust        : 0.961905
+  fear           : 0.009524
+  joy            : 0.009524
+  sadness        : 0.009524
+  dominant_emotion: disgust
+
+Statement        : I am so sad about this
+  anger          : 0.006061
+  disgust        : 0.006061
+  fear           : 0.006061
+  joy            : 0.006061
+  sadness        : 0.975758
+  dominant_emotion: sadness
+
+Statement        : I am really afraid that this will happen
+  anger          : 0.006061
+  disgust        : 0.006061
+  fear           : 0.975758
+  joy            : 0.006061
+  sadness        : 0.006061
+  dominant_emotion: fear

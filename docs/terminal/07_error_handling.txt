@@ -1,0 +1,49 @@
+TASK 7 - ACTIVITY 3 (supporting terminal evidence)
+Error handling: blank input is rejected gracefully
+==================================================
+
+Application layer - blank text returns the "no emotion" structure
+-----------------------------------------------------------------
+Command
+python -c "from EmotionDetection.emotion_detection import emotion_detector; print(emotion_detector(''))"
+
+Output
+{'anger': None, 'disgust': None, 'fear': None, 'joy': None, 'sadness': None, 'dominant_emotion': None}
+
+
+Command
+python -c "from EmotionDetection.emotion_detection import emotion_detector; print(emotion_detector('   '))"
+
+Output
+{'anger': None, 'disgust': None, 'fear': None, 'joy': None, 'sadness': None, 'dominant_emotion': None}
+
+In emotion_detection.py this is the outcome of the
+
+    if response.status_code == 400:
+        return _empty_result()
+
+branch used by the Watson NLP service for blank input (the blank input is also
+short-circuited before the request so the behaviour is identical offline).
+
+
+Web layer - the Flask route returns a readable error message
+------------------------------------------------------------
+Command (server running with: python server.py)
+curl -s "http://127.0.0.1:5000/emotionDetector?textToAnalyze="
+
+Output
+Invalid text! Please try again!
+
+
+Command (a valid statement still works, HTTP 200)
+curl -s "http://127.0.0.1:5000/emotionDetector?textToAnalyze=I%20am%20so%20sad%20about%20this"
+
+Output
+For the given statement, the system response is 'anger': 0.006061, 'disgust': 0.006061, 'fear': 0.006061, 'joy': 0.006061 and 'sadness': 0.975758. The dominant emotion is sadness.
+
+
+Result
+------
+Blank input never reaches the emotion model, the request does not crash the
+server, and the interface shows the message in red (see
+7c_error_handling_interface.png).
