@@ -1,4 +1,4 @@
-# Emotion Detector
+# Final Project
 
 **Project name:** Emotion Detector  
 **Programme:** Developing AI Applications with Python and Flask (IBM Skills Network)  
@@ -46,7 +46,7 @@ Blank input is rejected with a readable message:
 ## Project structure
 
 ```
-emotion-detector/
+oaqjp-final-project-emb-ai/
 ├── EmotionDetection/
 │   ├── __init__.py               # makes EmotionDetection a package
 │   ├── emotion_detection.py      # Watson NLP client + output formatting
@@ -74,8 +74,8 @@ emotion-detector/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/<your-username>/emotion-detector.git
-cd emotion-detector
+git clone https://github.com/laxmikant-kadam/oaqjp-final-project-emb-ai.git
+cd oaqjp-final-project-emb-ai
 
 # 2. Create and activate a virtual environment (optional but recommended)
 python -m venv .venv

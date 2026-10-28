@@ -25,30 +25,36 @@ Pylint 4.1.3.
 
 ---
 
-## 2. Publish the repository (Task 1)
+## 2. Repository setup (Task 1)
 
-A local Git repository has already been initialised with the first commit.
+The code is already published at
+<https://github.com/laxmikant-kadam/oaqjp-final-project-emb-ai> (public, branch
+`main`). The course also asks for the repository to be a **fork** of
+`ibm-developer-skills-network/oaqjp-final-project-emb-ai`. If the evaluator
+checks fork status, convert it as follows:
 
-1. Open <https://github.com/new>.
-2. **Repository name:** `emotion-detector`
-3. **Visibility:** Public.
-4. Leave *Add a README file*, *.gitignore* and *license* unchecked (they already exist).
-5. Click **Create repository**, then run:
+1. Open the repository → **Settings** → **General** → **Repository name** →
+   rename it to `emotion-detector-backup` → **Rename**. (Keeping the old copy
+   is optional; you can delete it instead, the code is in this folder.)
+2. Open <https://github.com/ibm-developer-skills-network/oaqjp-final-project-emb-ai>
+   → **Fork** → owner **laxmikant-kadam** → **Create fork**.
+3. Point the local clone at the fork and force-push the work:
 
 ```powershell
 cd "D:\Projects\emotion detector"
-git remote add origin https://github.com/<your-username>/emotion-detector.git
-git push -u origin main
+git remote set-url origin https://github.com/laxmikant-kadam/oaqjp-final-project-emb-ai.git
+git push -f origin main
 ```
 
-Replace `<your-username>` with your GitHub user name. Git Credential Manager will
-open a browser the first time; sign in and approve.
+4. Reload the fork: it must show *forked from
+   ibm-developer-skills-network/oaqjp-final-project-emb-ai*, the folder contents
+   above and a README whose first line is `# Final Project`.
 
-6. Optional polish: replace `<your-username>` in the `git clone` command inside
-   `README.md`, then `git commit -am "docs: set repository URL"` and `git push`.
+If fork status is not checked, the current standalone repository is already
+valid: public, correctly named, and the README starts with `# Final Project`.
 
 **Repository URL for Task 1:**
-`https://github.com/<your-username>/emotion-detector/blob/main/README.md`
+`https://github.com/laxmikant-kadam/oaqjp-final-project-emb-ai/blob/main/README.md`
 
 ---
 
@@ -56,10 +62,10 @@ open a browser the first time; sign in and approve.
 
 ### Task 1 — Repository URL (1 point)
 
-Submit: `https://github.com/<your-username>/emotion-detector/blob/main/README.md`
+Submit: `https://github.com/laxmikant-kadam/oaqjp-final-project-emb-ai/blob/main/README.md`
 
-The README states the project name (*Emotion Detector*), the Watson NLP
-dependency, the structure and how to run everything.
+The README starts with **Final Project**, states the project name (*Emotion
+Detector*), the Watson NLP dependency, the structure and how to run everything.
 
 ---
 
@@ -168,7 +174,7 @@ in full (all five reference statements with their scores).
 
 **Activity 1 — URL of `__init__.py`**
 
-`https://github.com/<your-username>/emotion-detector/blob/main/EmotionDetection/__init__.py`
+`https://github.com/laxmikant-kadam/oaqjp-final-project-emb-ai/blob/main/EmotionDetection/__init__.py`
 
 Content:
 
