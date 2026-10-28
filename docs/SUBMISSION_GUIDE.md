@@ -337,7 +337,8 @@ submitting a blank statement.
 
 **Activity 1 — `server.py` demonstrating static analysis**
 
-Paste the full `server.py`. The module docstring, route docstrings, named
+Paste [`submission/8a_server_modified.py`](../submission/8a_server_modified.py)
+— the complete `server.py`. The module docstring, route docstrings, named
 constants and `if __name__ == "__main__":` block are what make it
 Pylint-clean. Include the command used:
 
