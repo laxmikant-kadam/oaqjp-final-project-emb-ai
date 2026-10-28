@@ -72,7 +72,8 @@ oaqjp-final-project-emb-ai/
 │   ├── 6a_server.py              # Task 6 Activity 1 submission copy
 │   ├── 7a_error_handling_function.py  # Task 7 Activity 1 submission copy
 │   ├── 7b_error_handling_server.py    # Task 7 Activity 2 submission copy
-│   └── 8a_server_modified.py      # Task 8 Activity 1 submission copy
+│   ├── 8a_server_modified.py      # Task 8 Activity 1 submission copy
+│   └── 8b_static_code_analysis.txt  # Task 8 Activity 2 terminal transcript
 ├── 6b_deployment_test.png        # Task 6 deployment screenshot
 ├── 7c_error_handling_interface.png  # Task 7 error-handling screenshot
 ├── requirements.txt

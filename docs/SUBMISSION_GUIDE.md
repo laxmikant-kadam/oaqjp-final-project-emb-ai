@@ -348,12 +348,12 @@ python -m pylint server.py
 
 **Activity 2 — terminal output: perfect score**
 
-Paste [`docs/terminal/08_pylint.txt`](terminal/08_pylint.txt):
+Paste [`submission/8b_static_code_analysis.txt`](../submission/8b_static_code_analysis.txt):
 
 ```text
-
-------------------------------------
-Your code has been rated at 10.00/10
+$ pylint server.py
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
 ```
 
 ---
