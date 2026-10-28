@@ -67,7 +67,8 @@ oaqjp-final-project-emb-ai/
 │   ├── 3a_output_formatting.py   # Task 3 Activity 1 submission copy
 │   ├── 3b_formatted_output_test.txt  # Task 3 Activity 2 terminal transcript
 │   ├── 4b_packaging_test.txt     # Task 4 Activity 2 terminal transcript
-│   └── 5a_unit_testing.py        # Task 5 Activity 1 submission copy
+│   ├── 5a_unit_testing.py        # Task 5 Activity 1 submission copy
+│   └── 5b_unit_testing_result.txt  # Task 5 Activity 2 terminal transcript
 ├── 6b_deployment_test.png        # Task 6 deployment screenshot
 ├── 7c_error_handling_interface.png  # Task 7 error-handling screenshot
 ├── requirements.txt

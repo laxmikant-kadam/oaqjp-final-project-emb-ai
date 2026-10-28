@@ -1,0 +1,17 @@
+/home/project/final_project $ python3 -m unittest -v test_emotion_detection.py
+test_anger (test_emotion_detection.TestEmotionDetector)
+An angry statement must be detected as anger. ... ok
+test_disgust (test_emotion_detection.TestEmotionDetector)
+A disgusted statement must be detected as disgust. ... ok
+test_fear (test_emotion_detection.TestEmotionDetector)
+A frightened statement must be detected as fear. ... ok
+test_joy (test_emotion_detection.TestEmotionDetector)
+A glad statement must be detected as joy. ... ok
+test_sadness (test_emotion_detection.TestEmotionDetector)
+A sad statement must be detected as sadness. ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 8.086s
+
+OK
+/home/project/final_project $

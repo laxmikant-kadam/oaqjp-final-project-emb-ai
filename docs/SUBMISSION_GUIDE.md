@@ -226,7 +226,8 @@ five tests, one per Watson emotion, each asserting
 
 **Activity 2 — terminal output: all tests pass**
 
-Paste [`docs/terminal/05_unit_tests.txt`](terminal/05_unit_tests.txt).
+Paste [`submission/5b_unit_testing_result.txt`](../submission/5b_unit_testing_result.txt)
+— the verbose unittest run showing each test `ok`, `Ran 5 tests` and `OK`.
 
 Expected ending:
 
