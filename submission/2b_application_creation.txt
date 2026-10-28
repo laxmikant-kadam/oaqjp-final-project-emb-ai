@@ -1,0 +1,12 @@
+/home/project/final_project $ python3
+>>> from emotion_detection import emotion_detector
+>>> print(emotion_detector('I am really mad about this'))
+{'anger': 0.975758, 'disgust': 0.006061, 'fear': 0.006061, 'joy': 0.006061, 'sadness': 0.006061, 'dominant_emotion': 'anger'}
+>>> exit()
+/home/project/final_project $ python3 test_emotion_detection.py
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 8.119s
+
+OK
+/home/project/final_project $

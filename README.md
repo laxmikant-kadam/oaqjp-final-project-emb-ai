@@ -62,7 +62,8 @@ oaqjp-final-project-emb-ai/
 │   ├── terminal/                 # captured terminal output for each task
 │   └── SUBMISSION_GUIDE.md       # rubric checklist and submission steps
 ├── submission/
-│   └── 2a_emotion_detection.py   # Task 2 Activity 1 submission copy
+│   ├── 2a_emotion_detection.py   # Task 2 Activity 1 submission copy
+│   └── 2b_application_creation.txt  # Task 2 Activity 2 terminal transcript
 ├── 6b_deployment_test.png        # Task 6 deployment screenshot
 ├── 7c_error_handling_interface.png  # Task 7 error-handling screenshot
 ├── requirements.txt

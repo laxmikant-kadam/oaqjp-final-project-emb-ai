@@ -131,8 +131,13 @@ host cannot be reached (see section 6).
 
 **Activity 2 — terminal output: import and test without errors**
 
-Paste [`docs/terminal/02_import_and_test.txt`](terminal/02_import_and_test.txt)
-in full.
+Paste [`submission/2b_application_creation.txt`](../submission/2b_application_creation.txt)
+— the lab terminal transcript (`/home/project/final_project`) showing the
+`python3` shell, the import, `print(emotion_detector('I am really mad about this'))`,
+`exit()`, and `python3 test_emotion_detection.py` with all five tests passing.
+
+The longer version with explanatory notes is in
+[`docs/terminal/02_import_and_test.txt`](terminal/02_import_and_test.txt).
 
 ---
 
