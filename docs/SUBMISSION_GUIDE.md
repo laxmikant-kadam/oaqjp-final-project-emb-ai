@@ -286,7 +286,8 @@ It shows the running application with a completed analysis.
 
 **Activity 1 — `emotion_detector()` handling status code 400**
 
-Paste this part of `EmotionDetection/emotion_detection.py`:
+Paste [`submission/7a_error_handling_function.py`](../submission/7a_error_handling_function.py)
+— the complete `emotion_detection.py`. The relevant part is:
 
 ```python
     if not text_to_analyze or not str(text_to_analyze).strip():
