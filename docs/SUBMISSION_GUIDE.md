@@ -68,17 +68,25 @@ dependency, the structure and how to run everything.
 **Activity 1 — code of the application function**
 
 File: `EmotionDetection/emotion_detection.py` → `emotion_detector()`.
-
-Paste these two functions (the Watson call and the formatter are what the
-evaluator looks for):
+Paste the complete function, exactly as it appears in the repository:
 
 ```python
 def emotion_detector(text_to_analyze):
     """
     Detect the emotions expressed in ``text_to_analyze``.
+
+    Returns a dictionary with the five Watson NLP emotion scores and the
+    ``dominant_emotion``.  Blank or invalid input returns the same keys with
+    ``None`` values, which the web layer renders as an error message.
     """
     if not text_to_analyze or not str(text_to_analyze).strip():
+        # Watson NLP answers HTTP 400 for blank input; short-circuit the same
+        # documented outcome so the UI behaves identically when offline.
         return _empty_result()
+
+    if _BREAKER.is_open():
+        LOGGER.debug("Watson NLP circuit open; using the offline fallback model.")
+        return _format_response(offline_payload(text_to_analyze))
 
     payload = {"raw_document": {"text": text_to_analyze}}
     headers = {
@@ -87,16 +95,29 @@ def emotion_detector(text_to_analyze):
         "Accept": "application/json",
     }
 
-    response = requests.post(
-        WATSON_EMOTION_URL,
-        json=payload,
-        headers=headers,
-        timeout=REQUEST_TIMEOUT,
-    )
-    if response.status_code == 400:
-        return _empty_result()
-    response.raise_for_status()
-    return _format_response(response.json())
+    try:
+        response = requests.post(
+            WATSON_EMOTION_URL,
+            json=payload,
+            headers=headers,
+            timeout=REQUEST_TIMEOUT,
+        )
+        if response.status_code == 400:
+            return _empty_result()
+        response.raise_for_status()
+        watson_response = response.json()
+        _BREAKER.record_success()
+        return _format_response(watson_response)
+    except (requests.RequestException, ValueError, KeyError, IndexError) as error:
+        if not _FALLBACK_ENABLED:
+            raise
+        _BREAKER.record_failure()
+        LOGGER.warning(
+            "Watson NLP unavailable (%s); using the offline fallback model.",
+            type(error).__name__,
+        )
+        LOGGER.debug("Watson NLP error details: %s", error)
+        return _format_response(offline_payload(text_to_analyze))
 ```
 
 The submitted file also logs a warning and uses `offline_model.py` if the Watson
