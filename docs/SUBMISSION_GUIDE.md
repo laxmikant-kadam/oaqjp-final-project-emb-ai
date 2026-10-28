@@ -54,7 +54,7 @@ If fork status is not checked, the current standalone repository is already
 valid: public, correctly named, and the README starts with `# Final Project`.
 
 **Repository URL for Task 1:**
-`https://github.com/laxmikant-kadam/oaqjp-final-project-emb-ai/blob/main/README.md`
+`https://github.com/laxmikant-kadam/oaqjp-final-project-emb-ai`
 
 ---
 
@@ -62,7 +62,11 @@ valid: public, correctly named, and the README starts with `# Final Project`.
 
 ### Task 1 — Repository URL (1 point)
 
-Submit: `https://github.com/laxmikant-kadam/oaqjp-final-project-emb-ai/blob/main/README.md`
+Submit: `https://github.com/laxmikant-kadam/oaqjp-final-project-emb-ai`
+
+Paste only the repository URL - the grader opens the repository and checks that
+the README starts with **Final Project**. A `/blob/main/README.md` file link, or
+any extra text such as a clone command, is rejected.
 
 The README starts with **Final Project**, states the project name (*Emotion
 Detector*), the Watson NLP dependency, the structure and how to run everything.
