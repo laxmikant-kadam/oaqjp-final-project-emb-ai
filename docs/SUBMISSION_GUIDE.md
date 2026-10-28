@@ -175,8 +175,13 @@ Resulting dictionary:
 
 **Activity 2 — terminal output showing the format**
 
-Paste [`docs/terminal/03_formatted_output.txt`](terminal/03_formatted_output.txt)
-in full (all five reference statements with their scores).
+Paste [`submission/3b_formatted_output_test.txt`](../submission/3b_formatted_output_test.txt)
+— the `/home/project/final_project` transcript calling
+`print(emotion_detector('I am glad this happened'))` and showing all five
+scores plus `dominant_emotion`.
+
+The extended version with all five reference statements is in
+[`docs/terminal/03_formatted_output.txt`](terminal/03_formatted_output.txt).
 
 ---
 
