@@ -220,7 +220,9 @@ Additional import checks are in
 
 **Activity 1 — code of `test_emotion_detection.py`**
 
-Paste the whole file (`test_emotion_detection.py`, 5 tests, one per emotion).
+Paste [`submission/5a_unit_testing.py`](../submission/5a_unit_testing.py) — the
+five tests, one per Watson emotion, each asserting
+`result['dominant_emotion']` for a reference statement.
 
 **Activity 2 — terminal output: all tests pass**
 
